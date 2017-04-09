@@ -5,6 +5,8 @@ Run the container
 ```
 docker run \
    --name dnsmasq \
+   --restart=always \
+   --privileged \
    --net=host \
    -d \
    -v $(pwd)/dnsmasq.conf:/etc/dnsmasq.conf \
@@ -15,6 +17,8 @@ docker run \
 ```
 docker run \
    --name dnsmasq \
+   --restart=always \
+   --privileged \
    --net=host \
    -d \
    -v $(pwd)/dnsmasq.conf:/etc/dnsmasq.conf \
